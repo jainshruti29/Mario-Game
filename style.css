@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: aquamarine;
+    overflow: hidden;
+}
+.gameConatiner{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.mario{
+    background-image: url(mario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 125px;
+    position: absolute;
+    bottom: 73px;
+}
+.obstacle{
+    background-image: url(obstacle.png);
+    background-size: cover;
+    width: 130px;
+    height: 110px;
+    position: absolute;
+    bottom:80px ;
+    left: 44vw;
+}
+.animateMario{
+    animation: mario 0.6s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+.gameOver{
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+#scoreCont{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    right: 23px;
+    top: 12px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 110px;
+    border-radius: 10px;
+}
+@keyframes mario {
+    0%{
+        bottom: 73px;
+    }
+    50%{
+        bottom: 450px;
+    }
+    100%{
+        bottom: 73px;
+    }
+}
+@keyframes obstacleAni {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
